@@ -134,3 +134,13 @@ dist
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+
+# Playwright-BDD
+.features-gen/
+
+# VSCode
+.vscode/
+
+# Allure
+allure-report/
+allure-results/
