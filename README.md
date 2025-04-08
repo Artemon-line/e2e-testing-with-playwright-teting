@@ -136,6 +136,4 @@ This project includes a pre-configured GitHub Actions workflow ([`.github/workfl
 
 ## 📚 Resources
 
-- [Playwright Documentation](https://# 🎭 E2E Testing with Playwright and BDD
-
 This repository contains examples and configurations for using the [Playwright](https://playwright.dev/) tool with Behavior-Driven Development (BDD) using [playwright-bdd](https://github.com/streamich/playwright-bdd). Playwright is a powerful framework for testing web applications across multiple browsers with ease, and `playwright-bdd` allows you to write tests in a Gherkin-style syntax.
