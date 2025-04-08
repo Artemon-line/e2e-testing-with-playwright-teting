@@ -1,5 +1,7 @@
 # 🎭 E2E Testing with Playwright and BDD
 
+[![Playwright Tests](https://github.com/Artemon-line/e2e-testing-with-playwright-teting/actions/workflows/playwright.yml/badge.svg?branch=main)](https://github.com/Artemon-line/e2e-testing-with-playwright-teting/actions/workflows/playwright.yml)
+
 This repository contains examples and configurations for using the [Playwright](https://playwright.dev/) tool with Behavior-Driven Development (BDD) using [playwright-bdd](https://github.com/streamich/playwright-bdd). Playwright is a powerful framework for testing web applications across multiple browsers with ease, and `playwright-bdd` allows you to write tests in a Gherkin-style syntax.
 
 ---
