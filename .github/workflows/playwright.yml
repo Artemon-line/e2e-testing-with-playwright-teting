@@ -42,11 +42,10 @@ jobs:
           allure_history: allure-history
           keep_reports: 30
 
-      - name: Deploy report to Github Pages
-        if: always()
+      - name: Redeploy report to Github Pages
         uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: main
-          publish_dir: allure-history
+          publish_dir: ./allure-history
 
