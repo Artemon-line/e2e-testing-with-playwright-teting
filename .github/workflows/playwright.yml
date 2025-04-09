@@ -23,19 +23,12 @@ jobs:
       - name: Run Playwright BDD
         run: npx playwright test
 
-      - uses: actions/upload-artifact@v4
-        if: ${{ !cancelled() }}
-        with:
-          name: allure-results
-          path: allure-results
-          retention-days: 30
-
-      - name: Get Allure history
+      - name: Load test report history
         uses: actions/checkout@v4
         if: always()
         continue-on-error: true
         with:
-          ref: gh-pages
+          ref: main
           path: gh-pages
 
       - name: Build test report
@@ -52,7 +45,7 @@ jobs:
       - name: Deploy report to Github Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v3
-        env:
-          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: allure-history
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: main
+          publish_dir: allure-history
